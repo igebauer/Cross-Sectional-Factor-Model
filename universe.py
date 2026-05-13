@@ -5,8 +5,8 @@ Defines the stock universe for the factor model.
 ~150 liquid Russell 1000 names, diversified across sectors.
 Chosen to minimize survivorship bias concern while keeping data pull manageable.
 
-Survivorship bias note: these are current constituents. A production-grade
-implementation would use point-in-time constituent data (e.g. from CRSP).
+Due to lack of CRSP point-in-time constituents, I use a static liquid large-cap 
+universe as an approximation. Survivorship bias note: these are current constituents. 
 """
 
 TICKERS = [
