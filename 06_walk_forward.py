@@ -157,7 +157,7 @@ def print_metrics_table(metrics_list):
 
 
 def plot_results(port_gm, port_roa, port_q, market_ret):
-    fig, axes = plt.subplots(3, 1, figsize=(13, 12), sharex=True)
+    fig, axes = plt.subplots(2, 1, figsize=(13, 9), sharex=True)
     fig.suptitle("Walk-Forward L/S: Gross Margin vs ROA vs Quality Composite", fontsize=13)
 
     COLOR_GM  = "#2196F3"
@@ -202,20 +202,6 @@ def plot_results(port_gm, port_roa, port_q, market_ret):
     ax.set_ylabel("Drawdown")
     ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, _: f"{y:.0%}"))
     ax.legend(fontsize=9)
-
-    # Turnover
-    ax = axes[2]
-    for port, color, label in [(port_gm, COLOR_GM, "Gross Margin"), (port_roa, COLOR_ROA, "ROA"), (port_q, COLOR_Q, "Composite")]:
-        turn = port.loc[common, "turnover"].rolling(6).mean()
-        ax.plot(turn.index, turn.values * 100, color=color, linewidth=1.5,
-                label=f"{label} (6m avg)")
-    ax.set_title("Portfolio Turnover (6-month rolling average)")
-    ax.set_ylabel("Turnover (%)")
-    ax.set_xlabel("Date")
-    ax.legend(fontsize=9)
-    ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
-    ax.xaxis.set_major_locator(mdates.YearLocator(3))
-    ax.tick_params(axis="x", rotation=30)
 
     plt.tight_layout()
     out = os.path.join(PLOT_DIR, "walk_forward.png")
