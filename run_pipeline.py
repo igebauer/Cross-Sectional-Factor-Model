@@ -5,7 +5,7 @@ scripts = [
     "02_build_returns.py",
     "03_replicate_ff.py",
     "04_build_signal.py",
-    "95_ic_analysis.py",
+    "05_ic_analysis.py",
     "06_walk_forward.py"
 ]
 
