@@ -113,7 +113,7 @@ All results are out-of-sample. No transaction costs applied — at 0.8% monthly 
 ![IC Analysis](plots/ic_analysis.png)
 
 ### Walk-Forward Portfolio Performance (Stage 5)
-![Walk-Forward Validation](plots/walk_forward.png)
+![Walk-Forward Validation](plots/walk_forward.png?v=2)
 
 ---
 
