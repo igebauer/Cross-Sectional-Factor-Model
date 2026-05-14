@@ -104,6 +104,19 @@ All results are out-of-sample. No transaction costs applied — at 0.8% monthly 
 
 ---
 
+## Results
+
+### Factor Replication (Stage 2)
+![Factor Replication](plots/factor_replication.png)
+
+### IC Analysis — Quality Decomposition (Stage 4)
+![IC Analysis](plots/ic_analysis.png)
+
+### Walk-Forward Portfolio Performance (Stage 5)
+![Walk-Forward Validation](plots/walk_forward.png)
+
+---
+
 ## Limitations
 
 **Survivorship bias** — Universe uses current Russell 1000 constituents, not point-in-time. Delisted and acquired firms are excluded. A production implementation would use CRSP constituent history.
