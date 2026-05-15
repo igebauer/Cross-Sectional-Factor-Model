@@ -1,6 +1,6 @@
 # Cross-Sectional Equity Factor Model
 
-A from-scratch cross-sectional factor model built on 141 Russell 1000 stocks (2010–2024). The project replicates Fama-French SMB and HML factors, constructs and decomposes a quality alpha signal, and validates out-of-sample using walk-forward backtesting with a 60-month burn-in.
+A from-scratch cross-sectional factor model built on 141 Russell 1000 stocks (2010–2024). The project constructs approximations of Fama-French SMB and HML factors, constructs and decomposes a quality alpha signal, and validates out-of-sample using walk-forward backtesting with a 60-month burn-in.
 
 **Primary finding:** ROA (return on assets) as a standalone quality proxy produced the strongest signal in this universe, achieving a Sharpe ratio of **0.409**, **0.8% monthly turnover**, and positive out-of-sample IC (p=0.038).
 
@@ -58,7 +58,7 @@ First run takes ~10–15 minutes (data downloads and caches). Subsequent runs ar
 Monthly adjusted close prices via `yfinance`, resampled to month-end. Market cap approximated as shares outstanding × price. Returns winsorized at 1%/99% to remove split-adjustment errors.
 
 ### Stage 2 — Factor Replication
-SMB (Small Minus Big) constructed via 30/40/30 market cap sorts each month. HML (High Minus Low) constructed using earnings yield (1/PE) as a book-to-market proxy — the best approximation available without CRSP. SMB correlation with official FF: **r=0.633**. HML: **r=0.679**. Lower correlations are expected given the large-cap universe and E/P proxy.
+SMB (Small Minus Big) constructed via 30/40/30 market cap sorts each month. HML (High Minus Low) constructed using earnings yield (1/PE) as a book-to-market proxy - approximation necessitated by public data constraints. SMB correlation with official FF: **r=0.633**. HML: **r=0.679**. Lower correlations are expected given the large-cap universe and E/P proxy.
 
 ### Stage 3 — Quality Signal Decomposition
 Three signals constructed from `yfinance` fundamentals:
