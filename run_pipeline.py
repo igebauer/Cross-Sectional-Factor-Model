@@ -1,4 +1,5 @@
 import subprocess
+import sys
 
 scripts = [
     "01_fetch_data.py",
@@ -10,4 +11,4 @@ scripts = [
 ]
 
 for script in scripts:
-    subprocess.run(["python", script], check=True)
+    subprocess.run([sys.executable, script], check=True)
