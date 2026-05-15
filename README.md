@@ -121,7 +121,7 @@ All results are out-of-sample. No transaction costs applied — at 0.8% monthly 
 
 **Survivorship bias** — Universe uses current Russell 1000 constituents, not point-in-time. Delisted and acquired firms are excluded. A production implementation would use CRSP constituent history.
 
-**Static fundamental data** — Gross margin and ROA are pulled as current trailing values from `yfinance`, not historical point-in-time. A real factor model would use quarterly Compustat data with a reporting lag.
+**Static fundamental data** — Because yfinance does not provide historical point-in-time fundamentals, signals are effectively static firm-quality rankings applied over time, which likely understates turnover and overstates implementability.
 
 **Market cap proxy** — Shares outstanding from the latest filing multiplied by current price. Not historically accurate.
 
