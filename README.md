@@ -92,7 +92,7 @@ Long top 30% / short bottom 30% by signal, equal-weighted within each leg. 60-mo
 | Composite | 5.27% | 0.318 | -20.75% | 58.5% | 0.8% |
 | Market | 14.47% | 0.882 | -24.83% | 68.2% | — |
 
-All results are out-of-sample. No transaction costs applied — at 0.8% monthly turnover, real-world drag would be minimal.
+All results are out-of-sample. No transaction costs applied. Reported turnover is low due in part to static fundamentals, so real-world implementation costs may be higher.
 
 ---
 
